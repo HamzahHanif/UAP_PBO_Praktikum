@@ -1,22 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package uappbo;
+
 import java.util.ArrayList;
 
+/**
+ *
+ * @author hamza
+ */
 public class Barang extends Produk{
     private String barcode;
     private String expired;
+    private String kategori;
     private ArrayList<Kategori> produk;
 
-    public Barang(String nama_produk, double harga, int jumlah, double diskon, String barcode, String expired, ArrayList<Kategori> produk) {
+    public Barang(String nama_produk, double harga, int jumlah, double diskon, String barcode, String expired, String kategori) {
         super(nama_produk, harga, jumlah, diskon);
         this.barcode = barcode;
         this.expired = expired;
         this.produk = produk;
+        this.kategori = kategori;
     }
 
     public void addKategori(Kategori kategori){
         produk.add(kategori);
     }
     public void isExpired(){
-        System.out.println("Expired Baran = "+ this.expired);
+        System.out.println("Expired Barang = "+ this.expired);
     }
 
     public String getBarcode() {
@@ -27,6 +40,14 @@ public class Barang extends Produk{
         this.barcode = barcode;
     }
 
+        public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
+    
     public String getExpired() {
         return expired;
     }
