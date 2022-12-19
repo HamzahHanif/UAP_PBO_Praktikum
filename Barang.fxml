@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="464.0" prefWidth="737.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappbo.BarangController">
+   <children>
+      <VBox prefHeight="464.0" prefWidth="241.0" style="-fx-background-color: #fcdf8a;">
+         <children>
+            <Pane prefHeight="121.0" prefWidth="241.0" />
+            <Button fx:id="btnHome" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#sendHome" prefHeight="49.0" prefWidth="241.0" style="-fx-background-color: #fcdf8a;" text="Home" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnProduk" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#sendProduk" prefHeight="49.0" prefWidth="241.0" style="-fx-background-color: #ffc75f;" text="Produk" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnData" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="165.0" mnemonicParsing="false" onAction="#sendData" prefHeight="49.0" prefWidth="241.0" style="-fx-background-color: #fcdf8a;" text="Data" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPenjualan" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#sendPenjualan" prefHeight="49.0" prefWidth="241.0" style="-fx-background-color: #fcdf8a;" text="Penjualan" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="241.0" layoutY="-6.0" prefHeight="126.0" prefWidth="496.0" style="-fx-background-color: #fcdf8a;">
+         <children>
+            <Label alignment="CENTER" layoutX="127.0" layoutY="33.0" prefHeight="73.0" prefWidth="241.0" text="Program Kasir" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="239.0" layoutY="119.0" prefHeight="343.0" prefWidth="496.0">
+         <children>
+            <Label alignment="CENTER" layoutX="165.0" layoutY="27.0" prefHeight="30.0" prefWidth="165.0" text="BARANG" textAlignment="CENTER" textFill="#ffc75f">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="barcodebarang" layoutX="107.0" layoutY="86.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="namabarang" layoutX="107.0" layoutY="135.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="expiredbarang" layoutX="107.0" layoutY="183.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="kategoribarang" layoutX="107.0" layoutY="232.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="hargabarang" layoutX="326.0" layoutY="87.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="jumlahbarang" layoutX="326.0" layoutY="136.0" prefHeight="25.0" prefWidth="122.0" />
+            <TextField fx:id="diskonbarang" layoutX="326.0" layoutY="184.0" prefHeight="25.0" prefWidth="122.0" />
+            <Label layoutX="47.0" layoutY="90.0" text="Barcode" />
+            <Label layoutX="47.0" layoutY="139.0" text="Nama" />
+            <Label layoutX="47.0" layoutY="187.0" text="Expired" />
+            <Label layoutX="47.0" layoutY="236.0" text="Kategori" />
+            <Label layoutX="266.0" layoutY="91.0" text="Harga" />
+            <Label layoutX="266.0" layoutY="140.0" text="Jumlah" />
+            <Label layoutX="266.0" layoutY="188.0" text="Diskon" />
+            <Button fx:id="btnTambahbarang" layoutX="310.0" layoutY="299.0" mnemonicParsing="false" onAction="#addBarang" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #fcdf8a;" text="Tambah" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnHapusbarang" layoutX="392.0" layoutY="300.0" mnemonicParsing="false" onAction="#deleteBarang" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #CC8181;" text="Hapus" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="260.0" layoutY="236.0" text="Notifikasi" textFill="#979797" />
+            <Text fx:id="notif" fill="#acacac" layoutX="371.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
